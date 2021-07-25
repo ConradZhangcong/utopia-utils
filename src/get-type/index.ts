@@ -1,4 +1,4 @@
-import getObjectType from './getObjectType';
+import getObjectType from './get-object-type';
 import { TypeEnum } from './types';
 
 // 截取"[object type]"的起始位置

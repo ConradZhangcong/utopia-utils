@@ -1,33 +1,51 @@
 /** 对象类型枚举 */
+export enum ObjectTypeEnum {
+  // 基本数据类型
+  Number = '[object Number]',
+  String = '[object String]',
+  Boolean = '[object Boolean]',
+  Null = '[object Null]',
+  Undefined = '[object Undefined]',
+  Symbol = '[object Symbol]',
+  BigInt = '[object BigInt]',
+  // 复杂数据类型
+  Object = '[object Object]',
+  Array = '[object Array]',
+  Set = '[object Set]',
+  Map = '[object Map]',
+  Arguments = '[object Arguments]',
+  Date = '[object Date]',
+  Math = '[object Math]',
+  RegExp = '[object RegExp]',
+  Function = '[object Function]',
+  JSON = '[object JSON]',
+  Error = '[object Error]',
+  Global = '[object global]',
+  Window = '[object Window]',
+}
+
+/** 对象类型枚举 */
 export enum TypeEnum {
-  /** 基本数据类型 */
-  /** 数字 */
+  // 基本数据类型
   Number = 'Number',
-  /** 字符串 */
   String = 'String',
-  /** 布尔值 */
   Boolean = 'Boolean',
-  /** Null */
   Null = 'Null',
-  /** Undefined */
   Undefined = 'Undefined',
-  /** Symbol */
   Symbol = 'Symbol',
-  /** 大整数 */
   BigInt = 'BigInt',
-  /** 对象数据类型 */
-  /** 普通对象 */
+  // 复杂数据类型
   Object = 'Object',
-  /** Arguments对象 */
-  Arguments = 'Arguments',
-  /** 数组 */
   Array = 'Array',
-  /** 日期 */
-  Date = 'Date',
-  /** 正则 */
-  RegExp = 'RegExp',
-  /** Set */
   Set = 'Set',
-  /** Map */
   Map = 'Map',
+  Arguments = 'Arguments',
+  Date = 'Date',
+  Math = 'Math',
+  RegExp = 'RegExp',
+  Function = 'Function',
+  JSON = 'JSON',
+  Error = 'Error',
+  Global = 'global',
+  Window = 'Window',
 }
