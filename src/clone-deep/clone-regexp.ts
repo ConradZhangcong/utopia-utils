@@ -1,5 +1,5 @@
 /**
- * 克隆RegExp
+ * @desc 克隆RegExp
  * @param {symbol} source 原数据
  * @returns 克隆后的数据
  */

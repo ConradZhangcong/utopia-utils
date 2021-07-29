@@ -1,5 +1,5 @@
 /**
- * 克隆Symbol类型的数据
+ * @desc 克隆Symbol类型的数据
  * @param {symbol} source 原数据
  * @returns 克隆后的数据
  */

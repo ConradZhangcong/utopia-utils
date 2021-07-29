@@ -1,5 +1,5 @@
 /**
- * 克隆函数Function
+ * @desc 克隆函数Function
  * @param {function} source 原数据
  * @returns 克隆后的数据
  */
