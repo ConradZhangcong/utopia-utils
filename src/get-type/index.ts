@@ -15,7 +15,10 @@ const OBJECT_TYPE_SLICE_INDEX_END = -1;
 const getType = (obj: any): TypeEnum => {
   const objectType = getObjectType(obj); // 返回 "[object type]"
   // 截取type
-  const type = objectType.slice(OBJECT_TYPE_SLICE_INDEX_START, OBJECT_TYPE_SLICE_INDEX_END);
+  const type = objectType.slice(
+    OBJECT_TYPE_SLICE_INDEX_START,
+    OBJECT_TYPE_SLICE_INDEX_END,
+  );
   return type as TypeEnum;
 };
 

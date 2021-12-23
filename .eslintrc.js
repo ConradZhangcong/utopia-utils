@@ -2,8 +2,13 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 12,
@@ -11,9 +16,8 @@ module.exports = {
   },
   plugins: ['@typescript-eslint'],
   rules: {
-    // indent: ['warn', 2, { SwitchCase: 1, ignoredNodes: ['ConditionalExpression'], offsetTernaryExpressions: false }],
     'no-console': 'warn',
-    // 'prettier/prettier': 'error',
+    'no-explicit-any': 'off',
   },
   globals: {
     module: false,
