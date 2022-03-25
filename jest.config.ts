@@ -7,6 +7,7 @@ import path from 'path';
 import type { Config } from '@jest/types';
 
 const config: Config.InitialOptions = {
+  verbose: true,
   modulePaths: [path.resolve(__dirname, './test/')],
 };
 

@@ -1,11 +1,11 @@
 {
   "name": "utopia-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "utopia utils",
   "main": "index.js",
   "scripts": {
     "dist": "tsc -p tsconfig.json",
-    "test": "jest",
+    "test": "jest --config jest.config.ts",
     "lint": "eslint --ext .js,.ts src",
     "precommit": "eslint src/**/*.js",
     "prettier:check": "prettier --l src/**/*.ts",
@@ -32,6 +32,7 @@
     "@babel/core": "^7.16.5",
     "@babel/preset-env": "^7.16.5",
     "@babel/preset-typescript": "^7.16.5",
+    "@types/jest": "^27.4.1",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "babel-jest": "^27.4.5",

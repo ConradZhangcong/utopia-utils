@@ -15,11 +15,11 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint'],
-  rules: {
-    'no-console': 'warn',
-    'no-explicit-any': 'off',
-  },
   globals: {
     module: false,
+  },
+  rules: {
+    'no-console': ['warn', { allow: ['warn', 'error', 'time', 'timeEnd'] }],
+    'no-explicit-any': 'off',
   },
 };
