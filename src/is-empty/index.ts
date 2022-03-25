@@ -22,22 +22,22 @@ import getType, { TypeEnum } from '../get-type';
  * isEmpty({ a: 1 }) // false
  * isEmpty([1]) // false
  */
-const isEmpty = (value: any): boolean => {
+const isEmpty = (value: unknown): boolean => {
   const type = getType(value);
   switch (type) {
     case TypeEnum.Null:
     case TypeEnum.Undefined:
-      return false;
+      return true;
     case TypeEnum.Array:
     case TypeEnum.Arguments:
-      return !value.length;
+      return !(value as Array<unknown> | ArrayLike<unknown>).length;
     case TypeEnum.Set:
     case TypeEnum.Map:
-      return !value.size();
+      return !(value as Set<unknown> | Map<unknown, unknown>).size;
     case TypeEnum.Object:
-      return !Object.keys(value).length;
+      return !Reflect.ownKeys(value as Record<string | symbol, unknown>).length;
     default:
-      return true;
+      return false;
   }
 };
 

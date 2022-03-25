@@ -5,7 +5,7 @@ import { ObjectTypeEnum } from './types';
  * @param {*} obj
  * @returns {string} [object type]
  */
-const getObjectType = (obj: any): ObjectTypeEnum =>
+const getObjectType = (obj: unknown): ObjectTypeEnum =>
   Object.prototype.toString.call(obj) as ObjectTypeEnum;
 
 export default getObjectType;

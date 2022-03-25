@@ -12,7 +12,7 @@ const OBJECT_TYPE_SLICE_INDEX_END = -1;
  * @param {*} obj 需要检测类型的对象
  * @return {TypeEnum} 对象的类型
  */
-const getType = (obj: any): TypeEnum => {
+const getType = (obj: unknown): TypeEnum => {
   const objectType = getObjectType(obj); // 返回 "[object type]"
   // 截取type
   const type = objectType.slice(
@@ -22,6 +22,6 @@ const getType = (obj: any): TypeEnum => {
   return type as TypeEnum;
 };
 
-export { TypeEnum };
+export { TypeEnum, getObjectType };
 
 export default getType;
