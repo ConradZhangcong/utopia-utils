@@ -2,29 +2,20 @@
   "name": "utopia-utils",
   "version": "0.0.2",
   "description": "utopia utils",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "scripts": {
     "dist": "tsc -p tsconfig.json",
     "test": "jest --config jest.config.ts",
     "lint": "eslint --ext .js,.ts src",
     "precommit": "eslint src/**/*.js",
     "prettier:check": "prettier --l src/**/*.ts",
-    "prettier:fix": "prettier --write src/**/*.ts"
+    "prettier:fix": "prettier --write src/**/*.ts",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/ConradZhangcong/utopia-utils"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.js": [
-      "eslint --color",
-      "git add"
-    ]
   },
   "author": "Conrad",
   "license": "MIT",
@@ -32,6 +23,8 @@
     "@babel/core": "^7.16.5",
     "@babel/preset-env": "^7.16.5",
     "@babel/preset-typescript": "^7.16.5",
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
     "@types/jest": "^27.4.1",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
@@ -39,11 +32,14 @@
     "eslint": "^7.25.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
-    "husky": "^6.0.0",
+    "husky": "^7.0.4",
     "jest": "^27.4.5",
     "lint-staged": "^10.5.4",
     "prettier": "2.2.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "utopia-utils": "^0.0.2"
   }
 }
