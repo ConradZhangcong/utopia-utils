@@ -1,14 +1,16 @@
 {
   "name": "utopia-utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "utopia utils",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
-    "dist": "tsc -p tsconfig.json",
+    "build": "rimraf -rf dist lib && tsc -p tsconfig.json && npx babel dist -d lib --copy-files && rimraf -rf dist",
     "test": "jest --config jest.config.ts",
     "lint": "eslint --ext .js,.ts src",
-    "precommit": "eslint src/**/*.js",
     "prettier:check": "prettier --l src/**/*.ts",
     "prettier:fix": "prettier --write src/**/*.ts",
     "prepare": "husky install"
@@ -28,6 +30,7 @@
     "@types/jest": "^27.4.1",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
+    "babel-cli": "^6.26.0",
     "babel-jest": "^27.4.5",
     "eslint": "^7.25.0",
     "eslint-config-prettier": "^8.3.0",

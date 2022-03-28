@@ -8,6 +8,7 @@
 
 # dist
 /dist
+/lib
 
 # temp file
 /temp
