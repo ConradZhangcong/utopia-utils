@@ -1,6 +1,7 @@
 # ide
 .vscode
 .idea
+.DS_Store
 
 # dependency
 /node_modules
