@@ -1,14 +1,17 @@
 {
   "name": "utopia-utils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "utopia utils",
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "files": [
-    "lib"
+    "dist"
   ],
   "scripts": {
-    "build": "rimraf -rf dist lib && tsc -p tsconfig.json && npx babel dist -d lib --copy-files && rimraf -rf dist",
+    "clean": "rimraf -rf dist",
+    "build": "npm run clean && npm run build.compile && npm run build:types",
+    "build.compile": "babel src -d dist --verbose --extensions .ts -ignore */**/*.d.ts,src/**/__test__/**/*.test.ts --source-maps",
+    "build:types": "tsc --project tsconfig.types.json",
     "test": "jest --config jest.config.ts",
     "lint": "eslint --ext .js,.ts src",
     "prettier:check": "prettier --l src/**/*.ts",
@@ -22,15 +25,15 @@
   "author": "Conrad",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.16.5",
-    "@babel/preset-env": "^7.16.5",
-    "@babel/preset-typescript": "^7.16.5",
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
     "@types/jest": "^27.4.1",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
-    "babel-cli": "^6.26.0",
     "babel-jest": "^27.4.5",
     "eslint": "^7.25.0",
     "eslint-config-prettier": "^8.3.0",
@@ -41,8 +44,5 @@
     "prettier": "2.2.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.2.3"
-  },
-  "dependencies": {
-    "utopia-utils": "^0.0.2"
   }
 }
