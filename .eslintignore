@@ -1,4 +1,8 @@
-dist
-lib
-
-mode_modules
+**/dist/**
+**/lib/**
+**/node_modules/**
+package.json
+*.d.ts
+.eslintrc.js
+tsconfig.json
+tsconfig.node.json

@@ -2,4 +2,5 @@
 . "$(dirname "$0")/_/husky.sh"
 
 npx lint-staged --allow-empty $1
+npm run lint
 npm test

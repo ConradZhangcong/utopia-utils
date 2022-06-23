@@ -1,6 +1,5 @@
 /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
-// prettier-ignore
 {
   "compilerOptions": {
     /* Basic Options */
